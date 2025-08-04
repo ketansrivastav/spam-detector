@@ -1,0 +1,199 @@
+{
+  "version": "1.0",
+  "thresholds": {
+    "block": 80,
+    "flag": 50,
+    "allow": 49
+  },
+
+  "contentRules": {
+    "spamKeywords": [
+      "free money",
+      "make money fast",
+      "click here now",
+      "limited time offer",
+      "act now",
+      "urgent response required",
+      "congratulations winner",
+      "cash prize",
+      "earn $",
+      "work from home",
+      "get rich quick",
+      "guaranteed income",
+      "no experience needed",
+      "investment opportunity",
+      "double your money",
+      "risk free",
+      "bitcoin opportunity"
+    ],
+    "spamHashtags": [
+      "#followme",
+      "#follow4follow",
+      "#followforfollow",
+      "#followback",
+      "#f4f",
+      "#followtrain",
+      "#teamfollowback",
+      "#ifollowback",
+
+      "#like4like",
+      "#likeforlike",
+      "#l4l",
+      "#likes4likes",
+      "#likeforfollow",
+      "#likeme",
+      "#pleaselike",
+
+      "#tagsforlikes",
+      "#tags4likes",
+      "#followplease",
+      "#needfollowers",
+      "#gainpost",
+      "#gainfollowers",
+      "#followmeback",
+      "#mutual",
+
+      "#makemoneyonline",
+      "#workfromhome",
+      "#earnmoney",
+      "#getrich",
+      "#quickmoney",
+      "#easymoney",
+      "#freemoney",
+      "#makecash",
+
+      "#cryptogiveaway",
+      "#bitcoingiveaway",
+      "#freecrypto",
+      "#airdrop",
+      "#cryptoscam",
+      "#投资",
+      "#forex",
+      "#trading",
+
+      "#sexy",
+      "#hot",
+      "#adult",
+      "#cam",
+      "#nsfw",
+      "#xxx",
+
+      "#bot",
+      "#automated",
+      "#retweet",
+      "#rt",
+      "#spam",
+
+      "#buy",
+      "#sale",
+      "#discount",
+      "#deal",
+      "#offer",
+      "#promo",
+      "#cheap",
+      "#free",
+      "#win",
+      "#contest",
+      "#giveaway"
+    ],
+    "spamUsernames": [
+      "bot",
+      "auto",
+      "spam",
+      "fake",
+      "test",
+
+      "promo",
+      "deal",
+      "sale",
+      "buy",
+      "sell",
+      "shop",
+      "store",
+      "discount",
+      "cheap",
+      "free",
+      "win",
+      "prize",
+
+      "sexy",
+      "hot",
+      "cam",
+      "adult",
+      "xxx",
+      "porn",
+
+      "crypto",
+      "bitcoin",
+      "btc",
+      "eth",
+      "trading",
+      "forex",
+      "investment",
+      "profit",
+      "money",
+      "cash",
+      "rich",
+
+      "follow",
+      "like",
+      "follow4follow",
+      "f4f",
+      "followback",
+
+      "user",
+      "account",
+      "profile",
+      "temp",
+      "guest"
+    ],
+
+    "urlRegex": "(?:(?:https?|ftp|file):\\/\\/|www\\.|ftp\\.)(?:\\([-A-Z0-9+&@#\\/%=~_|$?!:,.]*\\)|[-A-Z0-9+&@#\\/%=~_|$?!:,.])*(?:\\([-A-Z0-9+&@#\\/%=~_|$?!:,.]*\\)|[A-Z0-9+&@#\\/%=~_|$])"
+  },
+
+  "suspiciousPatterns": {
+    "maxUrls": 2,
+    "maxHashtags": 5,
+    "maxCapitalWords": 8
+  },
+
+  "behaviorRules": {
+    "rateLimiting": {
+      "maxPostsPerHour": 10
+    },
+
+    "userReputation": {
+      "lowFollowerThreshold": 10,
+      "lowFollowerPenalty": 10,
+      "unverifiedPenalty": 5
+    }
+  },
+
+  "scoring": {
+    "weights": {
+      "spamKeywords": 8,
+      "excessiveUrls": 8,
+      "excessiveHashtags": 6,
+      "caps": 4.5,
+      "userDescriotionSpamKeywords": 6.15,
+      "userDescriptionExcessiveHashtag": 5.5,
+      "userDescriptionExcessiveUrls": 5.75,
+      "userNameSpamyKeywords": 6,
+      "isLowFollowers": 25,
+      "isUserLowFollowCount": 20,
+      "isUserNotVerified": 10,
+      "isHistoryPostingOften": 50
+    }
+  },
+
+  "platformSpecific": {
+    "twitter": {
+      "postHistoryCount": 20,
+      "cachePrefix": "twitter:history:",
+      "cacheTTL": 259200000,
+      "maxLength": 280,
+      "allowedMediaTypes": ["image", "video", "gif"],
+      "maxMediaPerPost": 4
+    }
+  }
+}
